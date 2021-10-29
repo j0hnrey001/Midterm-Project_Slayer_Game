@@ -1,5 +1,6 @@
 new Vue({
-    el: '',
+    el: '#game',
+    
     data: {
 
     },
