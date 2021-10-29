@@ -1,6 +1,4 @@
-function getRandomValue(min , max){
-  return Math.floor(Math.random() * (max , min)) + min
-}
+
 new Vue({
     el: '#game',
 
@@ -20,4 +18,7 @@ new Vue({
       }
     }
   })
+  function getRandomValue(min , max){
+    return Math.floor(Math.random() * (max , min)) + min
+  }
     
