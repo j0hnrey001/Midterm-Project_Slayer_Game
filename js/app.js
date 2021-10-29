@@ -9,10 +9,10 @@ new Vue({
       playerHealth: 100
     },
     computed: {
-      monsterBarStyle() {
+      monsterBarStyles() {
         return {width: this.monsterHealth + '%'};
       },
-      playerBarStyle() {
+      playerBarStyles() {
         return {width: this.playerHealth + '%'};
       }
     },
