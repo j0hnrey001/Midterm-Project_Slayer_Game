@@ -8,13 +8,7 @@ new Vue({
       monsterHealth: 100,
       playerHealth: 100
     },
-    computed: {
-      monsterBarStyle() {
-        return {width: this.monsterHealth + '%'};
-      },
-      playerBarStyle() {
-        return {width: this.playerHealth + '%'};
-      }
+    
     },
     methods: {
       attackMonster() {
