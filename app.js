@@ -1,8 +1,9 @@
 new Vue({
     el: '#game',
-    
-    data: {
 
+    data: {
+      monsterHealth: 100,
+      playerHealth: 100
     },
     created: {
 
