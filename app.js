@@ -6,7 +6,8 @@ new Vue({
 
     data: {
       monsterHealth: 100,
-      playerHealth: 100
+      playerHealth: 100,
+      currentRound: 0
     },
     computed: {
       monsterBarStyle() {
@@ -18,19 +19,22 @@ new Vue({
     },
     methods: {
       attackMonster() {
-        const attackValue = getRandomValue (8, 16);
+        this.currentRound ++;
+        const attackValue = getRandomValue (8, 13);
         this.monsterHealth -= attackValue;
         this.attackPlayer()
       },
       attackPlayer () {
-        const attackValue =getRandomValue (9, 18);
+        const attackValue =getRandomValue (10, 17);
         this.playerHealth -= attackValue;
       },
       specialAttackMonster(){
-        const attackValue = getRandomValue(11, 22);
+        this.currentRound ++;
+        const attackValue = getRandomValue (14, 23);
         this.monsterHealth -= attackValue;
-        this.attackPlayer();
-      }
+        this.attackPlayer()
+      },
+
     }
   })
 
