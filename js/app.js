@@ -78,6 +78,9 @@ new Vue({
         this.playerHealth += healValue;
         }
         this.attackPlayer()
+      },
+      playerSurrender() {
+        this.winner = 'monster';
       }
     }
   })
