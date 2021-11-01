@@ -24,21 +24,17 @@ new Vue({
     watch: {
       playerHealth(value) {
         if(value <= 0 && this.monsterHealth <= 0) {
-          // Draw
           this.winner = 'draw';
         }
         else if (value <= 0) {
-          // You lost
           this.winner = 'monster';
         }
       },
       monsterHealth(value) {
         if (value <= 0 && this.playerHealth <= 0) {
-          // Draw
           this.winner = 'draw';
         }
         else if (value <= 0) {
-          // You lost
           this.winner = 'player';
         }
       }
