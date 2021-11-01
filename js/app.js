@@ -12,9 +12,15 @@ new Vue({
     },
     computed: {
       monsterBarStyle() {
+        if (this.monsterHealth < 0) {
+          return {width: '0%'}
+        }
         return {width: this.monsterHealth + '%'};
       },
       playerBarStyle() {
+        if (this.playerHealth < 0) {
+          return {width: '0%'}
+        }
         return {width: this.playerHealth + '%'};
       },
       specialAttackRound () {
@@ -40,6 +46,12 @@ new Vue({
       }
     },
     methods: {
+      newGame() {
+        this.playerHealth = 100;
+        this.monsterHealth = 100;
+        this.currentRound = 0;
+        this.winner = null;
+      },
       attackMonster() {
         this.currentRound ++
         const attackValue = getRandomValue (8, 13);
